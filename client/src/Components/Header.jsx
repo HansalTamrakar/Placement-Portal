@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { images } from "../assets/landingpage/Constant";
-import { testimonials } from "../assets/landingpage/Constant";
+import { images } from "../assets/Constant";
+import { testimonials } from "../assets/Constant";
 import CarouselTestimonial from "../Components/CarouselTestimonial";
 import AuthModal from "../Components/Auth";
 import { Link } from "react-router-dom";

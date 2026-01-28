@@ -11,6 +11,7 @@ import HomePage from "./Pages/HomePage";
 import AuthModal from "./Components/Auth";
 import ArchStudioGallery from "./Pages/Selection";
 import { Activity } from "lucide-react";
+import Dashboard from "./Pages/Dashboard";
 
 
 
@@ -18,7 +19,7 @@ import { Activity } from "lucide-react";
 const App = () => {
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<LandingPage />}>
           <Route path="" element={<HomePage />} />
           <Route path="freelance" element={<Freelance />} />
@@ -36,7 +37,8 @@ const App = () => {
          
         </Route>
        
-      </Routes>
+      </Routes> */}
+      <Dashboard/>
      
      
     </>

@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { images } from "../assets/landingpage/Constant";
-import { testimonials } from "../assets/landingpage/Constant";
+import { images } from "../assets/Constant";
+import { testimonials } from "../assets/Constant";
 import CarouselTestimonial from "../Components/CarouselTestimonial";
 
 
@@ -15,9 +15,7 @@ const HomePage = () => {
     <div
       className={` min-h-screen bg-gradient-to-b  from-black  via-gray-900 to-black text-white overflow-hidden font-serif`}
     >
-      {/* ================= NAVBAR ================= */}
-
-      {/* ================= HERO ================= */}
+      
       <motion.section
         variants={fadeUp}
         initial="hidden"
