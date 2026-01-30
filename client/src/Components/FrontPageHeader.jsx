@@ -8,12 +8,14 @@ import {
   MenuItems,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Posts", href: "#", current: true },
-  { name: "Jobs", href: "#", current: false },
-  { name: "Connections", href: "#", current: false },
-  { name: "Messages", href: "#", current: false },
+  { name: "Posts", href: "/dashboard/posts", current: true },
+  { name: "Jobs", href: "/dashboard/jobs", current: false },
+  { name: "Connections", href: "/dashboard/connections", current: false },
+  { name: "roadmap", href: "/dashboard/roadmap", current: false },
 ];
 
 function classNames(...classes) {
@@ -21,6 +23,8 @@ function classNames(...classes) {
 }
 
 export default function FrontPageHeader() {
+  const [headernav,setHeaderNav]=useState()
+
   return (
     <Disclosure
       as="nav"
@@ -49,11 +53,13 @@ export default function FrontPageHeader() {
             </div>
             <div className="hidden sm:ml-6 sm:block pl-96 ">
               <div className="flex space-x-4 items-center  ">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    aria-current={item.current ? "page" : undefined}
+                {navigation.map((item,index) => (
+                  <Link to={item.name=="Posts"?"":item.name}
+                  key={index}
+                  onClick={()=>{
+                    setHeaderNav(item.name)
+                    
+                  }}
                     className={classNames(
                       item.current
                         ? "bg-gray-950/50 text-white"
@@ -62,7 +68,7 @@ export default function FrontPageHeader() {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

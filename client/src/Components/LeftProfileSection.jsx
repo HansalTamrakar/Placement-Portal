@@ -10,7 +10,7 @@ import {
 
 export default function LeftProfileSection() {
   return (
-    <div className=" fixed left-12 top-24 z-50  flex justify-center pt-16 mr-4 ">
+    <div className=" fixed left-12 top-24 z-50  flex justify-center pt-16 mr-4  ">
       <div className="w-[360px] bg-white rounded-2xl shadow-lg overflow-hidden">
 
         {/* Header */}

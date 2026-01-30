@@ -7,9 +7,11 @@ import BlogCard from "../Components/Blogcard";
 import JobSearchBar from "../Components/JobSearchBar";
 import InfiniteScroll from "../Components/InfiniteScrolling";
 import Connections from "../Components/Connection";
+import { Outlet } from "react-router-dom";
 
 
 export default function Dashboard() {
+  
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -31,9 +33,7 @@ export default function Dashboard() {
           <LeftProfileSection />
         </div>
         <div className="col-span-6">
-          <JobFeed />
-          {/* <InfiniteScroll/> */}
-          {/* <Connections/> */}
+          <Outlet/>
         </div>
         <div className="col-span-3 h-screen fixed overflow-y-auto left-3/4 right-0">
           <div className=" bg-gray-100 p-6 space-y-8  ">
